@@ -15,17 +15,18 @@ class PrintEditionItem
 		this.state = this.state * 1.5;
 	}
 
-	set state(number) 
+	set state(newState) 
 	{
-		if (number <= 0) 
+		if (newState < 0) 
 		{
 			this._state = 0;
-		} else if (number > 100) 
+		} else if (newState > 100) 
 		{
 			this._state = 100;
-		} else 
+		} 
+		else 
 		{
-			this._state = number;
+			this._state = newState;
 		}
 	}
 
